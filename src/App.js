@@ -1,12 +1,13 @@
 import React from 'react'
-import { Form, FormControl, Button, FormLabel } from 'react-bootstrap'
-import './App.css'
-import Times from './components/prayerTime/Times'
+
+import RealEstate from './components/Realtor/RealEstate'
+
 
 const App = () => {
   return (
     <>
-      <Times />
+    <RealEstate />
+      
     </>
   )
 }
