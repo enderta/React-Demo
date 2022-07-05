@@ -1,14 +1,11 @@
 import React from 'react'
-
-import RealEstate from './components/Realtor/RealEstate'
-
+import Todos from './components/Todos'
 
 const App = () => {
   return (
-    <>
-    <RealEstate />
-      
-    </>
+    <div>
+      <Todos  />
+    </div>
   )
 }
 
