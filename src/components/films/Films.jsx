@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
-import { Card, CardImg } from 'react-bootstrap'
+import { Button, Card, CardImg, Carousel } from 'react-bootstrap'
+import './films.css'
 
 const Films = () => {
     const [search, setSearch] = useState('Batman')
@@ -18,20 +19,30 @@ const getSearch = async () => {
   return (
     <div>
         <input type="text" value={search} onChange={e => setSearch(e.target.value)} />
+        <Button onClick={getSearch}>Search</Button>
         {
-            films.map(item => (
-                <Card style={{ width: '18rem' }} className="item1">
-                    <Card.Body>
-                        <Card.Title>{item.Title}</Card.Title>
-                        <Card.Text>
-                            {item.Year}
-                        </Card.Text>
-                        <Card.Text>
-                            <CardImg src={item.Poster} alt="Card image" />
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            ))
+            <Carousel keyboard slide touch wrap pause={false} className='carousel'>
+        {films.map((m) =>
+          <Carousel.Item interval={1000} >
+            <img  
+           
+              src={m.Poster}
+              alt={m.Title}
+            />
+            <Carousel.Caption>
+             
+             <h1>{m.Title}</h1>
+                <p>{m.Year}</p>
+
+            </Carousel.Caption>
+
+          </Carousel.Item>
+
+        )}
+
+
+
+      </Carousel>
         }
 
     </div>
