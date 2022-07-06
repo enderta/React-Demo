@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
-import { Button, Card, CardImg, Carousel } from 'react-bootstrap'
+import { Button, Form,FormControl, Carousel } from 'react-bootstrap'
 import './films.css'
 
 const Films = () => {
@@ -18,8 +18,12 @@ const getSearch = async () => {
 }
   return (
     <div>
-        <input type="text" value={search} onChange={e => setSearch(e.target.value)} />
-        <Button onClick={getSearch}>Search</Button>
+       <Form className='d-flex'>
+        <FormControl type='text' placeholder='Search' value={search} onChange={(e) => setSearch(e.target.value)} />
+        <Button className='btn' onClick={getSearch}>Search</Button>
+        </Form>
+      
+       
         {
             <Carousel keyboard slide touch wrap pause={false} className='carousel'>
         {films.map((m) =>

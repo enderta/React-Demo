@@ -6,3 +6,29 @@ img{
     border-radius: 5px;
 
 }
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 25%;
+    background-color: #110909;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+
+}
+.btn{
+    width: 25%;
+    height: 30px;
+    background-color: #470b0b;
+    border-radius: 5px;
+    color: rgb(131, 23, 23);
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #470b0b;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+}
