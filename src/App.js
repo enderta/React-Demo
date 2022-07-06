@@ -1,10 +1,13 @@
 import React from 'react'
-import Todos from './components/Todos'
+import Films from './components/films/Films'
+
+
 
 const App = () => {
   return (
     <div>
-      <Todos  />
+   <Films />
+    
     </div>
   )
 }
