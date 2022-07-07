@@ -9,7 +9,7 @@ import NotesApp from './components/notes/NotesApp'
 const App = () => {
   return (
     <div>
- <NotesApp />
+ <Resume />
     
     </div>
   )

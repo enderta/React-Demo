@@ -6,116 +6,133 @@ const Resume = () => {
   return (
 
 
-      <div className="parent">
-        <div className="div1">
-            <NavbarExample  />
+    <div className='w3-light-grey'>
+    {/* Hello world */}
+    {/* Page Container */}
+    <div className="w3-content w3-margin-top" style={{maxWidth: '1400px'}}>
+      {/* The Grid */}
+      <div className="w3-row-padding">
+        {/* Left Column */}
+        <div className="w3-third">
+          <div className="w3-white w3-text-grey w3-card-4">
+            <div className="w3-display-container">
+              <img src="https://directemployers.org/wp-content/uploads/2018/08/avatar-JaneDoe.jpg" style={{width: '100%'}} alt="Avatar" />
+              <div className="w3-display-bottomleft w3-container w3-text-black">
+                <h2>Jane Doe</h2>
+              </div>
+            </div>
+            <div className="w3-container">
+              <p><i className="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal" />Designer</p>
+              <p><i className="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal" />London, UK</p>
+              <p><i className="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal" />ex@mail.com</p>
+              <p><i className="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal" />1224435534</p>
+              <hr />
+              <p className="w3-large"><b><i className="fa fa-asterisk fa-fw w3-margin-right w3-text-teal" />Skills</b></p>
+              <p>Adobe Photoshop</p>
+              <div className="w3-light-grey w3-round-xlarge w3-small">
+                <div className="w3-container w3-center w3-round-xlarge w3-teal" style={{width: '90%'}}>90%</div>
+              </div>
+              <p>Photography</p>
+              <div className="w3-light-grey w3-round-xlarge w3-small">
+                <div className="w3-container w3-center w3-round-xlarge w3-teal" style={{width: '80%'}}>
+                  <div className="w3-center w3-text-white">80%</div>
+                </div>
+              </div>
+              <p>Illustrator</p>
+              <div className="w3-light-grey w3-round-xlarge w3-small">
+                <div className="w3-container w3-center w3-round-xlarge w3-teal" style={{width: '75%'}}>75%</div>
+              </div>
+              <p>Media</p>
+              <div className="w3-light-grey w3-round-xlarge w3-small">
+                <div className="w3-container w3-center w3-round-xlarge w3-teal" style={{width: '50%'}}>50%</div>
+              </div>
+              <br />
+              <p className="w3-large w3-text-theme"><b><i className="fa fa-globe fa-fw w3-margin-right w3-text-teal" />Languages</b></p>
+              <p>English</p>
+              <div className="w3-light-grey w3-round-xlarge">
+                <div className="w3-round-xlarge w3-teal" style={{height: '24px', width: '100%'}} />
+              </div>
+              <p>Spanish</p>
+              <div className="w3-light-grey w3-round-xlarge">
+                <div className="w3-round-xlarge w3-teal" style={{height: '24px', width: '55%'}} />
+              </div>
+              <p>German</p>
+              <div className="w3-light-grey w3-round-xlarge">
+                <div className="w3-round-xlarge w3-teal" style={{height: '24px', width: '25%'}} />
+              </div>
+              <br />
+            </div>
+          </div><br />
+          {/* End Left Column */}
         </div>
-        <div className="div2">
-            <h1>
-            </h1>
+        {/* Right Column */}
+        <div className="w3-twothird">
+          <div className="w3-container w3-card w3-white w3-margin-bottom">
+            <h2 className="w3-text-grey w3-padding-16"><i className="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal" />About Me</h2>
+            <div className="w3-container">
+                <p>I am a <b>Software Engineer</b>, currently working at <a href="https://www.google.com/">Google</a>. I have a passion for building web applications and I am currently learning React.js.</p>
+              <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+              <hr />
+            </div>
+          
+          </div>
+          <div className="w3-container w3-card w3-white w3-margin-bottom">
+            <h2 className="w3-text-grey w3-padding-16"><i className="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal" />Work Experience</h2>
+            <div className="w3-container">
+              <h5 className="w3-opacity"><b>Front End Developer / w3schools.com</b></h5>
+              <h6 className="w3-text-teal"><i className="fa fa-calendar fa-fw w3-margin-right" />Jan 2015 - <span className="w3-tag w3-teal w3-round">Current</span></h6>
+              <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+              <hr />
+            </div>
+            <div className="w3-container">
+              <h5 className="w3-opacity"><b>Web Developer / something.com</b></h5>
+              <h6 className="w3-text-teal"><i className="fa fa-calendar fa-fw w3-margin-right" />Mar 2012 - Dec 2014</h6>
+              <p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+              <hr />
+            </div>
+            <div className="w3-container">
+              <h5 className="w3-opacity"><b>Graphic Designer / designsomething.com</b></h5>
+              <h6 className="w3-text-teal"><i className="fa fa-calendar fa-fw w3-margin-right" />Jun 2010 - Mar 2012</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p><br />
+            </div>
+          </div>
+          <div className="w3-container w3-card w3-white">
+            <h2 className="w3-text-grey w3-padding-16"><i className="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal" />Education</h2>
+            <div className="w3-container">
+              <h5 className="w3-opacity"><b>W3Schools.com</b></h5>
+              <h6 className="w3-text-teal"><i className="fa fa-calendar fa-fw w3-margin-right" />Forever</h6>
+              <p>Web Development! All I need to know in one place</p>
+              <hr />
+            </div>
+            <div className="w3-container">
+              <h5 className="w3-opacity"><b>London Business School</b></h5>
+              <h6 className="w3-text-teal"><i className="fa fa-calendar fa-fw w3-margin-right" />2013 - 2015</h6>
+              <p>Master Degree</p>
+              <hr />
+            </div>
+            <div className="w3-container">
+              <h5 className="w3-opacity"><b>School of Coding</b></h5>
+              <h6 className="w3-text-teal"><i className="fa fa-calendar fa-fw w3-margin-right" />2010 - 2013</h6>
+              <p>Bachelor Degree</p><br />
+            </div>
+          </div>
+          {/* End Right Column */}
         </div>
-        <div className="div3">
-            <h1>resume
-            I have been in the IT sector for more than 3 years. I attended Cydeo Coding School and took part
-in two major projects as a non-paid Automation Tester intern.
-I worked as a technical support team member at Techpro Education Coding Course for the last 10
-months. Additionally, I am member of volunteer team in Code Your Future (CYF) which is UK
-based non-profit organization.
-I am well experienced to automate end to end tests using tools and platforms such as Java,
-Selenium Suite, SQL, JDBC, Postman, and Rest-Assured Library. I have hands-on knowledge of
-Cypress testing framework.
-Additionally, I have good amount of knowledge on ReactJS library.
-I consider myself a positive person, I have good analytical and management skills and the ability
-to work independently with minimal supervision.
-            </h1>
-        </div>
-        <div className="div4"> 
-        <h1>skills
-        <Table striped>
-        <thead>
-          <tr>
-            <th>Testing Tools</th>
-            <th>Frameworks</th>
-            <th>Languages</th>
-            <th>Front-End</th>
-            <th>Back-End</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td colSpan={2}>Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </Table>
-        </h1>
-        </div>
-        <div className="div5"> 
-        <h1>experiences
-        loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-        </h1>
-        </div>
-        <div className="div6">
-        <h1>education
-        loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-            loren ipsum
-        </h1>
-         </div>
+        {/* End Grid */}
       </div>
+      {/* End Page Container */}
+    </div>
+    <footer className="w3-container w3-teal w3-center w3-margin-top">
+      <p>Find me on social media.</p>
+      <i className="fa fa-facebook-official w3-hover-opacity" />
+      <i className="fa fa-instagram w3-hover-opacity" />
+      <i className="fa fa-snapchat w3-hover-opacity" />
+      <i className="fa fa-pinterest-p w3-hover-opacity" />
+      <i className="fa fa-twitter w3-hover-opacity" />
+      <i className="fa fa-linkedin w3-hover-opacity" />
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </footer>
+  </div>
     
   )
 }
