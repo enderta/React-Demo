@@ -5,6 +5,10 @@ html {
     font-family: 'Lato', sans-serif;
     font-size: 14px;
     font-weight: 400;
+   
+  }
+  body{
+    background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
   }
   
   *, *:before, *:after {
@@ -36,7 +40,7 @@ html {
   }
   
   .card {
-    background-color: #fff;
+    background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
     padding: 30px;
     position: relative;
     box-shadow: 0 0 5px rgba(75, 75, 75, .07);
@@ -45,7 +49,7 @@ html {
   
   .card-body {
     display: inline-block;
-    
+    float: left;
     width: 310px;
   }
   
@@ -74,10 +78,10 @@ html {
   
   .card-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 30px;
+    font-size: 60px;
     font-weight: 300;
     line-height: 60px;
-   
+    margin: 10px 0;
   }
   
   .card-description {
@@ -89,7 +93,7 @@ html {
   
   .card-read {
     cursor: pointer;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 6px;
     margin: 5px 0 20px;
@@ -124,4 +128,8 @@ html {
     margin: -1px auto 0;
     width: 80%;
     z-index: -1;
+  }
+  img{
+    width: 75%;
+    height: 75%;
   }
