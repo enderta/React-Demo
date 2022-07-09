@@ -1,3 +1,8 @@
 
 
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+html,body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #333;
+
+}

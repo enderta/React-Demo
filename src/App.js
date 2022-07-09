@@ -1,17 +1,17 @@
 import React from 'react'
-import Resume from './components/cv/Resume'
-import Films from './components/films/Films'
-import Home from './components/navbar/Home'
-import NotesApp from './components/notes/NotesApp'
+ // requires a loader
+import Recepie from './components/recepie/Recepie'
+import './App.css'
 
 
 
 const App = () => {
+
+
   return (
-    <div>
- <Resume />
-    
-    </div>
+   <div className='App'>
+   <Recepie />
+   </div>
   )
 }
 
