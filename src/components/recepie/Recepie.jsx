@@ -1,4 +1,5 @@
 import React, { useEffect,useState } from 'react'
+import './recipe.css'
 
 
 const Recepie = () => {
@@ -6,8 +7,7 @@ const Recepie = () => {
     const apiKey="3650deaa6f6b5a9fc878b8e7a4bf46a2"
     const [recipes, setRecipes] = React.useState([])
     const [search, setSearch] = React.useState("")
-    const [query, setQuery] = React.useState("")
-
+   
 
 
     useEffect(() => {
@@ -27,12 +27,8 @@ const Recepie = () => {
 
     const searchHandler = (e) => {
         setSearch(e.target.value)
+        
     }
-
-    const queryHandler = (e) => {
-        setQuery(e.target.value)
-    }
-
 
    
 
@@ -44,17 +40,26 @@ const Recepie = () => {
         <button onClick={getRecipes}>Search</button>
         <ul className='recepie'>
             {recipes.map((recipe) => (
-                <li className='box'>
-                    <h3>{recipe.recipe.label}</h3>
-                    <p>{recipe.recipe.calories}</p>
-                    <img src={recipe.recipe.image} alt={recipe.recipe.label} />
-                    <p>{recipe.recipe.source}</p>
-                    <p>{
-                        recipe.recipe.ingredients.map((ingredient) => (
-                            <li>{ingredient.text}</li>
-                        ))
-                    }</p>
+                <li>
+
+    <div className="card-container">
+    <div className="card u-clearfix">
+      <div className="card-body">
+        
+        <span className="card-author subtle">{recipe.recipe.source}</span>
+        <h2 className="card-title">{recipe.recipe.label}</h2>
+        <span className="card-description subtle">These last few weeks I have been working hard on a new brunch recipe for you all.</span>
+        <div className="card-read">Read</div>
+       
+      </div>
+      <img src={recipe.recipe.image} alt="" className="card-media" />
+    </div>
+    <div className="card-shadow" />
+  </div>
                 </li>
+                    
+
+                
             ))}
         </ul>
 

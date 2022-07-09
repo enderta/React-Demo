@@ -45,7 +45,7 @@ html {
   
   .card-body {
     display: inline-block;
-    float: left;
+    
     width: 310px;
   }
   
@@ -74,10 +74,10 @@ html {
   
   .card-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 300;
     line-height: 60px;
-    margin: 10px 0;
+   
   }
   
   .card-description {
@@ -89,7 +89,7 @@ html {
   
   .card-read {
     cursor: pointer;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 700;
     letter-spacing: 6px;
     margin: 5px 0 20px;
