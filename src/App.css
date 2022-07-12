@@ -125,3 +125,7 @@ html {
     width: 80%;
     z-index: -1;
   }
+  .highlighted {
+    background-color: #b83a3a;
+    color: white;
+  }

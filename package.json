@@ -17,7 +17,7 @@
     "express": "^4.18.1",
     "html-react": "^0.0.20",
     "millify": "^4.0.0",
-    "moment": "^2.29.3",
+    "moment": "^2.29.4",
     "nodemon": "^2.0.18",
     "parser": "^0.1.4",
     "react": "^18.2.0",
