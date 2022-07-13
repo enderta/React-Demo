@@ -4,6 +4,7 @@ import Search from './components/hotels/Search'
 import Recepie from './components/recepie/Recepie'
 import './App.css'
 import TableS from './components/hotels/TableS'
+import SearchByCatagories from './components/catagories/SearchByCatagories'
 
 
 
@@ -12,7 +13,7 @@ const App = () => {
 
 
   return (
-  <TableS />
+  <SearchByCatagories />
   )
 }
 

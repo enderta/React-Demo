@@ -1,5 +1,5 @@
 html {
-    background: #FAF7F2;
+    background: #9b6a15;
     background-image: url(https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png);
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
@@ -36,7 +36,7 @@ html {
   }
   
   .card {
-    background-color: #fff;
+    background-color: white;
     padding: 30px;
     position: relative;
     box-shadow: 0 0 5px rgba(75, 75, 75, .07);
@@ -99,7 +99,7 @@ html {
   }
   
   .card-read:after {
-    background-color: #b8bddd;
+    background-color: white;
     content: "";
     display: block;
     height: 1px;
@@ -128,4 +128,9 @@ html {
   .highlighted {
     background-color: #b83a3a;
     color: white;
+  }
+  .cat{
+    background-color: #080707;
+    color: white;
+    
   }
