@@ -1,9 +1,12 @@
 
 import React from 'react'
-import {Table} from 'react-bootstrap'
+import {Table,Button,Form,FormControl} from 'react-bootstrap'
 
 const Meduna = () => {
-  const [data,setData]=React.useState([])
+  const [profile,setProfile]=React.useState([])
+  const [input,setInput]=React.useState('')
+  const [searchResults,setSearchResults]=React.useState([])
+
 
   
 
@@ -45,7 +48,8 @@ const Meduna = () => {
       fetch("https://medunna.com/api/users", requestOptions)
       .then(response=>response.json())
       .then(result=>{
-        setData(result)
+        setProfile(result)
+        setSearchResults(result)
       }
       )
       .catch(error=>console.log('error',error))
@@ -53,11 +57,37 @@ const Meduna = () => {
     })
   },[])
 
+  const handleSearch = (e) => {
+
+    setInput(e.target.value)
+    const results = profile.filter(profile => profile.firstName.toLowerCase().includes(e.target.value.toLowerCase()))
+    setSearchResults(results)
+  }
+
+const handleInput = (e) => {
+  setInput(e.target.value)
+  const results = profile.filter(profile => profile.firstName.toLowerCase().includes(input.toLowerCase()))
+  setSearchResults(results)
+}
+
+const handleClick = (e) => {
+  e.preventDefault()
+  // const results = profile.filter(profile => profile.firstName.toLowerCase().includes(input.toLowerCase()))
+  // setSearchResults(results)
+}
+
 
   return (
+
    
 
     <div>
+    <Form className='d-flex'>
+    <FormControl type='text' placeholder='Search' value={input} onChange={handleInput} />
+    <Button onClick={handleClick}>Search</Button>
+    </Form>
+
+     
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -68,14 +98,18 @@ const Meduna = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map(user=>(
-            <tr key={user.id}>
-              <td>{user.firstName}</td>
-              <td>{user.lastName}</td>
-              <td>{user.email}</td>
-              <td>{user.ssn}</td>
-            </tr>
-          ))}
+          {
+            searchResults.map(profile=>(
+              <tr key={profile.id}>
+                <td>{profile.firstName}</td>
+                <td>{profile.lastName}</td>
+                <td>{profile.email}</td>
+                <td>{profile.ssn}</td>
+              </tr>
+            ))
+
+          }
+
         </tbody>
       </Table>
 
