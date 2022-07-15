@@ -1,0 +1,43 @@
+.row{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px;
+
+}
+.logo{
+  width: 300px;
+  height: auto;
+}
+.nav.items{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px;
+}
+.menu-item{
+  margin-left: 15px;
+ 
+
+}
+.nav-link{
+  color: #000;
+  text-decoration: none;
+}
+.nav-link:hover{
+text-decoration: underline;
+}
+.sub-menu{
+  list-style: none;
+  display: none;
+
+
+}
+.sub-menu .menu-item{
+  margin-left: 0px;
+  margin-bottom: 5px;
+}
+.sub-menu-itme:hover .sub-menu{
+  background-color: #f5f5f5; 
+}
+.down{
+  vertical-align: bottom;
+}

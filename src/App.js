@@ -1,19 +1,11 @@
 import React from 'react'
-import Search from './components/hotels/Search'
- // requires a loader
-import Recepie from './components/recepie/Recepie'
-import './App.css'
-import TableS from './components/hotels/TableS'
-import SearchByCatagories from './components/catagories/SearchByCatagories'
-
-
-
+import Search2 from './components/SearchBar/Search2'
 
 const App = () => {
-
-
   return (
-  <SearchByCatagories />
+    <div>
+      <Search2 />
+    </div>
   )
 }
 
