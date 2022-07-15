@@ -6,6 +6,7 @@ const Meduna = () => {
   const [profile,setProfile]=React.useState([])
   const [input,setInput]=React.useState('')
   const [searchResults,setSearchResults]=React.useState([])
+ 
 
 
   
@@ -77,6 +78,12 @@ const handleClick = (e) => {
 }
 
 
+const handleProfile = (e) => {
+  e.preventDefault()
+  const results = profile.filter(profile => profile.firstName.toLowerCase().includes(input.toLowerCase()))
+  setSearchResults(results)
+}
+
   return (
 
    
@@ -95,6 +102,7 @@ const handleClick = (e) => {
             <th>Last Name</th>
             <th>Email</th>
             <th>SSN</th>
+            
           </tr>
         </thead>
         <tbody>
