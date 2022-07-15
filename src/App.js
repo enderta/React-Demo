@@ -1,10 +1,10 @@
 import React from 'react'
-import Search2 from './components/SearchBar/Search2'
+import Meduna from './components/meduna/Meduna'
 
 const App = () => {
   return (
     <div>
-      <Search2 />
+      <Meduna />
     </div>
   )
 }

@@ -23,6 +23,9 @@ const [searchResults, setSearchResults] = useState(profile)
 
 const handleSearch = (e) => {
   setSearch(e.target.value)
+  /** const results = profile.filter(profile => profile.firstName.toLowerCase().includes(e.target.value.toLowerCase())
+  || profile.surname.toLowerCase().includes(e.target.value.toLowerCase()))
+  setSearchResults(results) */
 }
 
 const handleSubmit = (e) => {
@@ -41,7 +44,7 @@ const handleSubmit = (e) => {
 
 return (
 <>
-<input type="text" onChange={handleSearch}/>
+<input type="text" value={search} onChange={handleSearch}/>
 <button onClick={handleSubmit}>Search</button>
 {
 searchResults.map(profile => {
