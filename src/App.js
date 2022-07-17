@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card} from 'react-bootstrap'
+import {Card,Table} from 'react-bootstrap'
 
 const App = () => {
   
@@ -46,32 +46,45 @@ const App = () => {
     <div>
       <input className='input' type="text" value={search} onChange={handleSearch} />
       <button onClick={handleSubmit}>Search</button>
-      {
-        filteredData.map(item => (
-          
-              <Card style={{ width: '18rem' }}>
-                <Card.Body>
-                  <Card.Title>{item.name}</Card.Title>
-                  <Card.Text>
-                    {item.email}
-                  </Card.Text>
-                  <button onClick={() => handleProfile(item.id)}>Profile</button>
-                  {
-                    item.id === id ? <Card.Text>{profile.address.street}<br/>
+      <div className='container'>
+      <Table >
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Website</th>
+            <th>Profile</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredData.map(item => (
+            <tr key={item.id}>
+              <td>{item.name}</td>
+              <td>{item.email}</td>
+              <td>{item.phone}</td>
+              <td>{item.website}</td>
+              <td>
+              <button onClick={() => handleProfile(item.id)}>Profile</button>
+              {
+                    item.id === id ? <><br/>
+
+                    {profile.address.street}<br/>
                     {profile.address.city}
                     <br/>
-                    {profile.address.zipcode}</Card.Text> : null
+                    {profile.address.zipcode}</>: null
 
                   }
 
-                </Card.Body>
-              </Card>
-            
-        ))
-        
-      }
+                
+             </td>
+            </tr>
+          ))}
+        </tbody>
 
+      </Table>
 
+</div>
 
 
     </div>
