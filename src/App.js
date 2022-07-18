@@ -6,8 +6,8 @@ const App = () => {
   const [data, setData] = React.useState([])
   const [search, setSearch] = React.useState('')
   const [filteredData, setFilteredData] = React.useState(data)
-  const [profile, setProfile] = React.useState({})
-  const [id, setId] = React.useState('')
+  const[showProfile,SetShowProfile] = React.useState(false)
+  const [id,setId]=React.useState('')
 
   React.useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
