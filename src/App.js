@@ -1,64 +1,42 @@
-import React from 'react'
-import { Table } from 'react-bootstrap'
+import React,{ PureComponent } from 'react'
+import { BarChart,Bar,LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const App = () => {
-  const [data, setData] = React.useState([])
-  const [search, setSearch] = React.useState('')
-  const [filteredData, setFilteredData] = React.useState(data)
+  const data = [
+  {
+    country: 'USA',
+    inflation: 2.3,
+    population: 32.2,
+    gdp: 3.6,
+  },
+  {
+    country: 'China',
+    inflation: 3.4,
+    population: 32.6,
+    gdp: 4.8,
+  },
+  {
+    country: 'Japan',
+    inflation: 4.5,
+    population: 32.8,
+    gdp: 6.0,
+  }
   
-
-  const handleSearch = (e) => {
-    setSearch(e.target.value)
-  }
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setFilteredData(data.filter(item => item.firstName.toLowerCase().includes(search.toLowerCase())))
-  }
-
-  React.useEffect(() => {
-    
-  }, [])
-  var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnaW5vLndpbnRoZWlzZXIiLCJhdXRoIjoiUk9MRV9FTVBMT1lFRSIsImV4cCI6MTY1ODIzNjMyMX0.fx3ydSIrFh25-CDG_1BnIWUGKy5r-oUJZU8kIXyhKSVn7p5EfB_TMs9ef2ASzgnkwe1q6shAd9iHT_sPJTerRQ");
-
-var requestOptions = {
-  method: 'GET',
-  headers: myHeaders,
-  redirect: 'follow',
- "Access-Control-Allow-Origin":  "*",
-"Access-Control-Allow-Methods": "POST GET PUT DELETE",
-"Access-Control-Allow-Headers": "Content-Type, Authorization"
-};
-
-fetch("https://www.gmibank.com/api/tp-customers", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
-
+  ];
   return (
     <div>
-      <input type="text" value={search} onChange={handleSearch} />
-      <button type="submit" onClick={handleSubmit}>Search</button>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
-            <th>country</th>
-            </tr>
-        </thead>
-        <tbody>
-          {filteredData.map(item => (
-            <tr key={item.id}>
-              <td>{item.firstName}</td>
-              <td>{item.lastName}</td>
-              <td>{item.email}</td>
-              <td>{item.country.name}</td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={data}>
+          <XAxis dataKey="country" />
+          <YAxis />
+          <CartesianGrid strokeDasharray="3 3" />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="inflation" fill="#8884d8" />
+          <Bar dataKey="population" fill="#82ca9d" />
+          <Bar dataKey="gdp" fill="#ffc658" />
+        </BarChart>
+      </ResponsiveContainer>
 
 
     </div>
