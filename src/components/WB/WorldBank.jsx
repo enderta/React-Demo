@@ -1,5 +1,5 @@
 import React,{ PureComponent,useState,useEffect } from 'react'
-import WorldBankCharts from './WorldBankCharts';  
+import WorldBankCharts from './WorldBankCharts';
 
 const WorldBank = () => {
 const [data,setData] = useState([]);
