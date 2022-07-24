@@ -1,8 +1,20 @@
 form{
   position: fixed;
 }
-.container{
+.contain:nth-child(even) {
+
+color: #cec112;
  
-  margin: 20px;
-  justify-self: center;
+}
+.contain:nth-child(odd) {
+  color: rgb(109, 102, 109);
+  
+}
+h1:{
+  position: relative;
+  margin: 10px;
+  font-size: 30px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
 }

@@ -47,28 +47,28 @@ const [searchResults, setSearchResults] = React.useState([])
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={handleSearch} value={search} placeholder="Search for a country..." />
         </form>
-        <Table striped bordered hover>
-        <thead>
-          <tr>
+        <table  className='container' >
+        <thead className='head'>
+          <tr >
             <th>Country</th>
             <th>Yearly Rate</th>
             <th>Year</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody >
           {searchResults.map(inflation => (
-            <tr key={inflation.id}>
+            <tr className='contain' key={inflation.id}>
               <td>{inflation.country}</td>
               <td>{inflation.yearly_rate_pct}</td>
               <td>{inflation.period}</td>
             </tr>
           ))}
         </tbody>
-      </Table>
+      </table >
       <div>
         <h1>Grafic</h1>
         <div>
-          <ResponsiveContainer width="100%" height={300}>
+          <ResponsiveContainer className='container' width="100%" height={300}>
            <BarChart data={searchResults}>
               <XAxis dataKey="country">
               june 2022
