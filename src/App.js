@@ -1,11 +1,11 @@
 import React from 'react'
 import Cakes from './components/Cake/Cakes'
-import WorldBank from './components/WB/WorldBank'
+import Infilation from './components/WB/Infilation'
 
 const App = () => {
   return (
     <div>
-      <Cakes />
+      <Infilation />
     </div>
   )
 }
