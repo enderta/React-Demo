@@ -1,11 +1,11 @@
 import React from 'react'
-import Cakes from './components/Cake/Cakes'
-import Infilation from './components/WB/Infilation'
+import Dictionary from './components/RandomWords/Dictionary'
+import RandomWords from './components/RandomWords/RandomWords'
 
 const App = () => {
   return (
     <div>
-      <Infilation />
+      <RandomWords   />
     </div>
   )
 }
