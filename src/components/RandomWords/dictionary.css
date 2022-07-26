@@ -1,0 +1,32 @@
+*{
+  margin: 10px;
+  padding: 10px;
+  
+}
+.random-words {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.random-words__word {
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+.random-words__word:hover {
+  background-color: #fff;
+  color: #000;
+}
+.random-words__word:active {
+  background-color: #fff;
+  color: #000;
+}
+.random-words__word:focus {
+  background-color: #fff;
+  color: #000;
+}

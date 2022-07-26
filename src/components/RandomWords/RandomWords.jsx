@@ -1,5 +1,6 @@
 import React from 'react'
 import Dictionary from './Dictionary'
+import './dictionary.css' 
 
 const RandomWords = () => {
   const [words, setWords] = React.useState('')

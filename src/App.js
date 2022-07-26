@@ -1,11 +1,10 @@
 import React from 'react'
-import Dictionary from './components/RandomWords/Dictionary'
-import RandomWords from './components/RandomWords/RandomWords'
+import City from './components/Cities/City'
 
 const App = () => {
   return (
     <div>
-      <RandomWords   />
+      <City   />
     </div>
   )
 }

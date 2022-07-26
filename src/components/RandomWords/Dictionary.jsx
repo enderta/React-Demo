@@ -17,7 +17,7 @@ const Dictionary = (props) => {
       }else{
      setDefinition(result[0].meanings[0].definitions[0].definition)
       setExample(result[0].meanings[0].definitions[0].example)
-      console.log(result[0].meanings[0].definitions)
+      
     }}
     , [])
   }, [props.word])
