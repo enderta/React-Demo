@@ -38,6 +38,8 @@
   margin-right: 1rem;
   color: var(--primary-color);
   cursor: pointer;
+  align-items: flex-end;
+ 
 }
 
 .footer h2 {
@@ -101,7 +103,6 @@
   color: #f8f8f8;
   font-size: 3rem;
 }
-
 
 @media screen and (max-width: 940px) {
   .footer {

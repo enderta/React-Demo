@@ -1,6 +1,7 @@
 import React from 'react'
 import './cloud.css'
-
+import { Link } from "react-scroll";
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
 const Cloud = () => {
   return (
     <div className='cloud'>
