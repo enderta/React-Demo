@@ -9,7 +9,7 @@ const Hero = () => {
           <h1>Data</h1>
           <h1 className='blue'>Secured</h1>
           <h1>Protection</h1>
-          <div><button>learn more </button></div>
+          <div><button>Learn More </button></div>
         </div>
       </div>
     </div>
