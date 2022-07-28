@@ -5,6 +5,7 @@ import Recovery from './Recovery'
 import Footer from './Footer'
 import Data from './Data'
 import Cloud from './Cloud'
+import Contact from './Contact'
 const Home = () => {
   return (
     <div>
@@ -13,6 +14,7 @@ const Home = () => {
       <Cloud />
       <Data /> 
       <Recovery />
+      <Contact /> 
    
     </div>
   )
