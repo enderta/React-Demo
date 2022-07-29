@@ -1,19 +1,25 @@
-let mostExpensive=(arr)=>{
- let max=0
- let maxKey=''
- for (const key in arr) {
-  if(arr[key]>max){
-   max=arr[key]
-    maxKey=key
+let freq=(arr0,arr1)=>{
+  let arr2=flatMap()
+console.log(arr2)
+  let obj={}
+  for(let i=0;i<arr2.length;i++){
+    if(obj[arr2[i]]){
+      obj[arr2[i]]++
+    }else{
+      obj[arr2[i]]=1
+    }
   }
-    
-  }
- 
-  return maxKey+" is the most expensive"
-}
+  console.log(obj)
 
-console.log(mostExpensive({
-  "Silver Bracelet": 280,
-  "Gemstone Earrings": 180,
-  "Diamond Ring": 3500
-}))
+let max=1
+let arr3=[]
+for(let key in obj){
+  if(obj[key]>max){
+    arr3.unshift(Number(key))
+  }
+  
+}
+return arr3.sort((a,b)=>a-b)
+}
+  
+console.log(freq([1, 2, 2, 2, 3, 4, 5], [1, 2, 4, 5]))
