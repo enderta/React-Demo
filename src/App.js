@@ -1,4 +1,5 @@
 import React from 'react'
+import Counter from './components/counter/Counter'
 import Country from './components/countries/Country'
 import Cloud from './components/dataSecure/Cloud'
 import Data from './components/dataSecure/Data'
@@ -10,7 +11,7 @@ import Navbar from './components/dataSecure/Navbar'
 const App = () => {
   return (
     <div>
- <Country />
+ <Counter />
     </div>
   )
 }
