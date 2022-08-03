@@ -63,7 +63,7 @@ const handleLoading=()=>{
           <td>{user.first_name}</td>
           <td>{user.last_name}</td>
           <td>{user.email}</td>
-          <td><img src={user.avatar} alt="avatar"/></td>
+          <td><img src={user.avatar} style={{height:'5em'}} alt="avatar"/></td>
         </tr>
       )
     }
