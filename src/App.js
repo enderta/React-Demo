@@ -7,6 +7,7 @@ const App = () => {
   const [query, setQuery] = useState('')
   const [filteredUsers, setFilteredUsers] = useState(users)
   const [isLoading, setIsLoading] = useState(false)
+
 const handleFilter=async()=>{
   const response=await fetch(`https://random-data-api.com/api/users/random_user?size=10`)
   const data=await response.json()
@@ -45,7 +46,7 @@ const handleLoading=()=>{
    <br/>
    {
       isLoading?<h1>Loading...</h1>:
-      <Table striped bordered hover>
+      <Table striped bordered hover size="sm" variant='dark' style={{margin:0,height:'100rem'}}>
   <thead>
     <tr>
       <th>#</th>
