@@ -4,6 +4,7 @@ import { useState,useEffect } from 'react'
 const App = () => {
   const [users, setUsers] = useState([])
   const [query, setQuery] = useState('')
+  const [filteredUsers, setFilteredUsers] = useState(users)
 
   
   
@@ -14,20 +15,49 @@ const App = () => {
   }, [])
   console.log(users)
 
+  const handleFilter = (e) => {
+    setQuery(e.target.value)
+    const results = users.filter(user => user.first_name.toLowerCase().includes(e.target.value.toLowerCase()))
+ setFilteredUsers(results) 
+    
+
+  }
 
 
   return (
     <div>
-      <input type="text" placeholder='search...' onChange={(e)=>setQuery(e.target.value)} />
-      <ul>
-        {
-          users.filter(user => user.first_name.toLowerCase().includes(query.toLowerCase()) || user.last_name.toLowerCase().includes(query.toLowerCase())).map(user => {
-            return <li>{user.first_name} {user.last_name}</li>
-          }
-          )
-        }
-
-      </ul>
+      <input type="text" value={query} onChange={handleFilter}/>
+   <table className="table table-striped">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Avatar</th>
+      </tr>
+    </thead>
+    <tbody>
+    {
+      query.length > 0 ? filteredUsers.map(user => {
+        return <tr>
+          <td>{user.first_name}</td>
+          <td>{user.last_name}</td>
+          <td>{user.email}</td>
+          <td><img src={user.avatar} alt="avatar"/></td>
+        </tr>
+      }
+      ) : users.map(user => {
+        return <tr>
+          <td>{user.first_name}</td>
+          <td>{user.last_name}</td>
+          <td>{user.email}</td>
+          <td><img src={user.avatar} alt="avatar"/></td>
+        </tr>
+      }
+      )
+    }
+    </tbody>
+  </table>
    
     </div>
   )
