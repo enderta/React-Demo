@@ -9,8 +9,11 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(false)
 
 const handleFilter=async()=>{
+  setIsLoading(true)
   const response=await fetch(`https://random-data-api.com/api/users/random_user?size=10`)
+  
   const data=await response.json()
+  setIsLoading(false)
   setUsers(data)
   setFilteredUsers(data)
 }
@@ -29,23 +32,14 @@ const handleQuery=(e)=>{
   
 }
 
-const handleLoading=()=>{
-  setIsLoading(true)
-  setTimeout(()=>{
-    setIsLoading(false)
-  }
-  ,2000)
-}
-
-
 
   return (
     <div>
    <input style={{position:'fixed'}} type="text" placeholder='search...' value={query} onChange={handleQuery}  />
    <br/>
-   <br/>
+   
    {
-      isLoading?<h1>Loading...</h1>:
+     isLoading?<h1>Loading...</h1>:
       <Table striped bordered hover size="sm" variant='dark' style={{margin:0,height:'100rem'}}>
   <thead>
     <tr>
