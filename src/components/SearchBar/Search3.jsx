@@ -6,11 +6,11 @@ const Search3 = () => {
     const [users, setUsers] = useState([])
     const [query, setQuery] = useState('')
     const [filteredUsers, setFilteredUsers] = useState(users)
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
   
   const handleFilter=async()=>{
-    setIsLoading(true)
-    const response=await fetch(`https://random-data-api.com/api/users/random_user?size=10`)
+  
+    const response=await fetch(`https://random-data-api.com/api/users/random_user?size=20`)
     
     const data=await response.json()
     setIsLoading(false)
@@ -55,12 +55,12 @@ const Search3 = () => {
     <tbody>
       {filteredUsers.map((user,index)=>{
         return(
-          <tr key={index}>
-            <td>{user.id}</td>
-            <td>{user.first_name}</td>
-            <td>{user.last_name}</td>
-            <td>{user.email}</td>
-            <td><img src={user.avatar} style={{height:'5em'}} alt="avatar"/></td>
+          <tr key={index} >
+            <td  style={{height:'5em'}}>{user.id}</td>
+            <td  style={{height:'5em'}}>{user.first_name}</td>
+            <td  style={{height:'5em'}}>{user.last_name}</td>
+            <td  style={{height:'5em'}}>{user.email}</td>
+            <td ><img src={user.avatar}  style={{height:'5em'}} alt="avatar"/></td>
           </tr>
         )
       }

@@ -1,10 +1,12 @@
 import React from 'react'
-import Search3 from './components/SearchBar/Search3'
+import Comodities from './components/comodities/Comodities'
+import Symbols from './components/comodities/Symbols'
 
 const App = () => {
   return (
     <div>
-      <Search3 />
+   
+      <Comodities />
     </div>
   )
 }
