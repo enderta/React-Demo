@@ -1,12 +1,10 @@
 import React from 'react'
-import Comodities from './components/comodities/Comodities'
-import Symbols from './components/comodities/Symbols'
+import Select from './components/comodities/Select'
 
-const App = () => {
+function App() {
   return (
     <div>
-   
-      <Comodities />
+      <Select />
     </div>
   )
 }

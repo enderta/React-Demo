@@ -39,9 +39,7 @@ const Comodities = () => {
         }
             , [])
 
-     console.log(data[comodity])       
-
-            
+   
        
   return (
     <div>
