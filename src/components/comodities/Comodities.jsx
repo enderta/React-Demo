@@ -55,6 +55,9 @@ const Comodities = () => {
             </select>
            
         </form>
+        <div>
+            <h1>{symbols[comodity]}</h1>
+        </div>
     </div>
   )
 }
