@@ -3,6 +3,7 @@ import { ResponsiveContainer,Bar,BarChart,XAxis,YAxis,CartesianGrid,Tooltip,Lege
 import worldbankcss from './worldbank.css'
 
 const WorldBankCharts = (props) => {
+  console.log(props.data[1])
   return (
     <div>
       <h1>World Bank Charts</h1>

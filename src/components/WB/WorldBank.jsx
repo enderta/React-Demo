@@ -1,6 +1,7 @@
 import React,{ PureComponent,useState,useEffect } from 'react'
 import { Table } from 'react-bootstrap';
 import Select from '../comodities/Select';
+import GoogleCharts from './GoogleCharts';
 import WorldBankCharts from './WorldBankCharts';
 
 const WorldBank = (props) => {
@@ -89,6 +90,7 @@ const handleSubmit = (e) => {
 </Table>
 <div>
   <WorldBankCharts data={filters}/>
+  <GoogleCharts data={filters}/>
 </div>
    </>
  
