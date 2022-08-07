@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState,useEffect} from 'react'
+import WorldBank from '../WB/WorldBank'
 
 const Select = () => {
     const [obj, setObj] = useState([])
@@ -47,7 +48,14 @@ const Select = () => {
                 }
             </select>
         </form>
-        <h1>{selected}</h1>
+        <br/>
+        <div>
+            <h1>
+                {selected}
+            </h1>
+        </div>
+        <WorldBank country={selected}/>
+     
 
         </>
     )

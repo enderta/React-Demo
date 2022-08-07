@@ -1,7 +1,8 @@
 import React,{ PureComponent,useState,useEffect } from 'react'
+import Select from '../comodities/Select';
 import WorldBankCharts from './WorldBankCharts';
 
-const WorldBank = () => {
+const WorldBank = (props) => {
 const [data,setData] = useState([]);
 
 const [search,setSearch] = useState('');
@@ -29,11 +30,12 @@ setFilters(result[1]);
 
 },[])
 
-
+const cout=props.country;
 
 const handleChange = (e) => {
   setSearch(e.target.value);
-  setFilters(data.filter(item=>item.country.value.toLowerCase().includes(e.target.value.toLowerCase())));
+ setFilters(data.filter(item=>item.country.value.toLowerCase().includes(e.target.value.toLowerCase())));
+//setFilters(data.filter(i=>i.cout.value.toLowerCase().includes(e.target.value.toLowerCase())));
   
 }
 const handleSubmit = (e) => {
@@ -46,10 +48,23 @@ const handleSubmit = (e) => {
  
   return (
    <>
-   <form onSubmit={handleSubmit}>
-    <input type="text" value={search} onChange={handleChange}/> 
-    <button type="submit">Search</button>
-    </form>
+ 
+  <select onChange={handleChange}>
+    <option value="">Select</option>
+    {
+      Object.keys(data).map((key) => {
+        return <option key={key} value={data[key].country.value}>{data[key].country.value}
+        </option>
+
+      }
+      )
+    }
+  </select>
+  <br/>
+
+  
+
+ 
 <table className="table table-striped">
   <thead>
     <tr>
@@ -81,3 +96,8 @@ const handleSubmit = (e) => {
 }
 
 export default WorldBank;
+
+// <form onSubmit={handleSubmit}>
+// <input type="text" value={search} onChange={handleChange}/> 
+// <button type="submit">Search</button>
+// </form>
