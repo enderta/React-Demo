@@ -1,40 +1,57 @@
 import React from 'react'
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 
 const Select = () => {
-    const [obj, setObj] = useState('')
-    let data={
-      'usa':'USD',
-      'india':'INR',
-      'china':'CNY',
-      'japan':'JPY',
-      'korea':'KRW',
-      'australia':'AUD'
+    const [obj, setObj] = useState([])
+    const [selected, setSelected] = useState('')
+  
+
+    const getData = async () => {
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+          };
+          
+          fetch("https://restcountries.com/v3.1/all", requestOptions)
+            .then(response => response.json())
+            .then(result => {
+                setObj(result)
+            }).catch(error => console.log('error', error));
     }
-    const handleChange = (e) => {
-      setObj(e.target.value)
+    useEffect(() => {
+        getData()
     }
+        , [])
+  
+        
+    
     const handleSubmit = (e) => {
       e.preventDefault()
     }
+   const handleChange = (e) => {
+    setSelected(e.target.value)
+    }
   
     return (
-      <div>
+      <>
         <form onSubmit={handleSubmit}>
-          <select value={obj} onChange={handleChange}>
-            <option value="">Select Comodity</option>
-            {Object.keys(data).map(key => (
-              <option key={key} value={key}>{key}</option>
-            ))}
-  
-          </select>
-          </form>
-          <div>
-            <h1>{data[obj]}</h1>
-            </div>
-       
-      </div>
-    )
-  }
+            <select onChange={handleChange}>
+                <option value="">Select</option>
+                {
+                    Object.keys(obj).map((key) => {
+                        return <option key={key} value={obj[key]['name']['common']}>{obj[key]['name']['common']
+                        }</option>
 
-export default Select
+                }
+                )
+                }
+            </select>
+        </form>
+        <h1>{selected}</h1>
+
+        </>
+    )
+}
+export default Select;
+            
+     
