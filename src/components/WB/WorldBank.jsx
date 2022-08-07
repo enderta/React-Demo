@@ -30,13 +30,12 @@ setFilters(result[1]);
 
 },[])
 
-const cout=props.country;
+
 
 const handleChange = (e) => {
   setSearch(e.target.value);
  setFilters(data.filter(item=>item.country.value.toLowerCase().includes(e.target.value.toLowerCase())));
-//setFilters(data.filter(i=>i.cout.value.toLowerCase().includes(e.target.value.toLowerCase())));
-  
+
 }
 const handleSubmit = (e) => {
   e.preventDefault();
