@@ -6,17 +6,19 @@ const WorldBankCharts = (props) => {
   return (
     <div>
       <h1>World Bank Charts</h1>
-      <ResponsiveContainer className='container' width={400} height={400}>
+      <ResponsiveContainer className='container' width={400} height={400} fill="red">
         <BarChart
-          data={props.data}
+          data={props.data
+          
+          }
          
         >
           <XAxis dataKey="country.value" />
           <YAxis />
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid strokeDasharray="3 3" fill='yellow' />
           <Tooltip />
           <Legend />
-          <Bar dataKey="value" fill="#8884d8" />
+          <Bar dataKey="value" fill="red" />
         </BarChart>
       </ResponsiveContainer>
     </div>

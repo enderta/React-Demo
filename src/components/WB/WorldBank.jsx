@@ -1,4 +1,5 @@
 import React,{ PureComponent,useState,useEffect } from 'react'
+import { Table } from 'react-bootstrap';
 import Select from '../comodities/Select';
 import WorldBankCharts from './WorldBankCharts';
 
@@ -47,9 +48,9 @@ const handleSubmit = (e) => {
  
   return (
    <>
- 
-  <select onChange={handleChange}>
-    <option value="">Select</option>
+ <h1>2021 Population</h1>
+  <select style={{'position':'fixed'}} onChange={handleChange}>
+    <option value="">Select a Country</option>
     {
       Object.keys(data).map((key) => {
         return <option key={key} value={data[key].country.value}>{data[key].country.value}
@@ -64,7 +65,7 @@ const handleSubmit = (e) => {
   
 
  
-<table className="table table-striped">
+<Table variant='dark' striped="true">
   <thead>
     <tr>
       <th scope="col">Country</th>
@@ -85,7 +86,7 @@ const handleSubmit = (e) => {
    }
 
   </tbody>
-</table>
+</Table>
 <div>
   <WorldBankCharts data={filters}/>
 </div>
