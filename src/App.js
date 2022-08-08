@@ -1,12 +1,18 @@
+import { Container, Grid } from '@mui/material'
 import React from 'react'
-import Select from './components/comodities/Select'
-import GoogleCharts from './components/WB/GoogleCharts'
-import WorldBank from './components/WB/WorldBank'
-
+import TourCard from './components/materialUI/TourCard'
 function App() {
   return (
     <div>
-      <GoogleCharts />
+      <Container>
+
+        <Grid container spacing={3}>
+          <TourCard />
+          <TourCard />
+          <TourCard />
+          <TourCard />
+        </Grid>  
+      </Container>
     </div>
   )
 }
